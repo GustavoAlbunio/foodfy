@@ -1,0 +1,217 @@
+/* === HEADER === */
+
+.header {
+  background: #fbdfdb;
+  border-radius: 30px;
+  z-index: 1;
+
+  position: relative;
+}
+
+.header .title {
+  padding: 150px 50px;
+  width: 50%;
+}
+
+.header .title h1 {
+  font-size: 32px;
+  color: #111111;
+}
+
+.header .title p {
+  opacity: 0.7;
+  font-size: 18px;
+  color: #000000;
+  line-height: 28px;
+  margin-top: 10px;
+}
+
+.header img {
+  position: absolute;
+  bottom: 0;
+  right: 15%;
+  z-index: -1;
+}
+
+/* === CONTENT === */
+
+.content {
+  margin: 50px 0 80px;
+}
+
+.content h1 {
+  font-size: 24px;
+  color: #111111;
+  margin-bottom: 20px;
+}
+
+.content .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 20px;
+}
+
+.content .cards .card {
+  cursor: pointer;
+}
+
+.content .cards .card img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.content .cards .card h2 {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #111111;
+  font-weight: normal;
+}
+
+.content .cards .card p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #777777;
+}
+
+.content > h1 {
+  margin-bottom: 30px;
+}
+
+.content > p {
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+/* === FOOTER === */
+
+footer {
+  background: #eeeeee;
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-size: 14px;
+  color: #999999;
+  text-align: center;
+  margin: auto 0;
+}
+
+/* === MODAL === */
+
+.modal {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal .container {
+  background: white;
+  width: 40%;
+  padding: 30px;
+  border-radius: 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal .container img {
+  border-radius: 16px;
+  width: 100%;
+}
+
+.modal .container h1 {
+  margin-top: 20px;
+  font-weight: normal;
+  font-size: 24px;
+  color: #111111;
+}
+
+.modal .container p {
+  margin-top: 5px;
+  font-size: 18px;
+  color: #777777;
+}
+
+.modal .container button {
+  margin-top: 40px;
+  background: none;
+  border: 1px solid #999999;
+  font-size: 16px;
+  color: #999999;
+  padding: 10px;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.modal .container button:hover {
+  background: #999999;
+  color: white;
+}
+
+/* === RESPONSIVE === */
+
+@media (max-width: 1024px) {
+  .modal .container {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal .container {
+    width: 80%;
+  }
+
+  .header img {
+    height: 75%;
+  }
+}
+
+@media (max-width: 540px) {
+  .header .title {
+    padding: 50px 50px;
+    width: 100%;
+  }
+
+  .header img {
+    opacity: 0.2;
+    right: 10%;
+    max-height: 95%;
+  }
+
+  .modal .container {
+    width: 90%;
+  }
+
+  .modal .container h1 {
+    text-align: center;
+  }
+}

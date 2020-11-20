@@ -1,0 +1,43 @@
+.navBar {
+  display: flex;
+  align-items: center;
+
+  height: 80px;
+}
+
+.navBar .logo {
+  margin-right: 10%;
+}
+
+.navBar ul {
+  display: flex;
+}
+
+.navBar ul li {
+  margin-right: 30px;
+  list-style: none;
+}
+
+.navBar ul li a {
+  text-decoration: none;
+  color: #111;
+  font-size: 16px;
+}
+
+.navBar ul li.selected {
+  font-weight: bold;
+}
+
+/* === RESPONSIVE === */
+
+@media (max-width: 540px) {
+  .navBar ul {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .navBar ul li {
+    margin-right: 0;
+    margin-left: 30px;
+  }
+}
